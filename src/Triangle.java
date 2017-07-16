@@ -3,20 +3,33 @@
  */
 public class Triangle {
 
-    static void drawOneAsterisk(){
-        drawNHorizontalAsterisks(1);
+    static void drawOneAsterisk() {
+        drawHorizontalLineOfAsterisks(1);
     }
 
-    static  void drawNHorizontalAsterisks(int N){
-        String output="";
-        for(int counter =0 ; counter < N ; counter++){
-            output+="*";
+    static void drawHorizontalLineOfAsterisks(int N) {
+        String output = "";
+        for (int counter = 0; counter < N; counter++) {
+            output += "*";
         }
         System.out.print(output);
     }
-    public static void main(String[] args){
-            drawOneAsterisk();
-            System.out.println();
-            drawNHorizontalAsterisks(8);
+
+    static void drawVerticalLineOfAsterisk(int N) {
+        String output = "";
+        for (int counter = 0; counter < N; counter++) {
+            output += "*\n";
+
+        }
+        System.out.print(output);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("one asterisk \n");
+        drawOneAsterisk();
+        System.out.println("\n\nhorizontal line");
+        drawHorizontalLineOfAsterisks(8);
+        System.out.println("\n\nVertical line");
+        drawVerticalLineOfAsterisk(8);
     }
 }
