@@ -12,7 +12,20 @@ public class Diamond {
 
     }
 
-    
+    private static void drawReverseIsoscelesTriangle(int N) {
+        for (int counter = 1; counter < N; counter++) {
+            drawHorizontalLineOfGivenCharacter(counter, ' ');
+            drawHorizontalLineOfGivenCharacter(2 * (N - counter) - 1, '*');
+            System.out.println();
+        }
+
+    }
+    static void drawDiamond(int N){
+
+        drawIsoscelesTriangle(N);
+        drawReverseIsoscelesTriangle(N);
+    }
+
     static void drawHorizontalLineOfGivenCharacter(int N, char symbol) {
         String output = "";
         for (int counter = 0; counter < N; counter++) {
@@ -24,6 +37,9 @@ public class Diamond {
     public static void main(String args[]) {
         System.out.println("IsoscelesTriangle");
         drawIsoscelesTriangle(5);
+
+        System.out.println("Diamond");
+        drawDiamond(5);
 
     }
 }
