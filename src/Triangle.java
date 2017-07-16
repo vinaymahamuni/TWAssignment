@@ -12,7 +12,7 @@ public class Triangle {
         for (int counter = 0; counter < N; counter++) {
             output += "*";
         }
-        System.out.print(output);
+        System.out.println(output);
     }
 
     static void drawVerticalLineOfAsterisk(int N) {
@@ -24,6 +24,12 @@ public class Triangle {
         System.out.print(output);
     }
 
+    static void drawRightTriangle(int N) {
+        for(int counter =1 ; counter<=N ; counter++){
+            drawHorizontalLineOfAsterisks(counter);
+        }
+    }
+
     public static void main(String[] args) {
         System.out.println("one asterisk \n");
         drawOneAsterisk();
@@ -31,5 +37,7 @@ public class Triangle {
         drawHorizontalLineOfAsterisks(8);
         System.out.println("\n\nVertical line");
         drawVerticalLineOfAsterisk(8);
+        System.out.println("\n\nRightAngleTriangle");
+        drawRightTriangle(10);
     }
 }
