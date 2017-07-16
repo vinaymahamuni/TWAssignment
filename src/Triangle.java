@@ -4,7 +4,7 @@
 public class Triangle {
 
     static void drawOneAsterisk(){
-        System.out.print("*");
+        drawNHorizontalAsterisks(1);
     }
 
     static  void drawNHorizontalAsterisks(int N){
